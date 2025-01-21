@@ -1,14 +1,6 @@
 ﻿Public Class Form1
     Private Sub Form1_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
-        kon.Open()
-        perintah.Connection = kon
-        perintah.CommandType = CommandType.Text
-        perintah.CommandText = "select * from transaksi"
-        mda.SelectCommand = perintah
-        ds.Tables.Clear()
-        mda.Fill(ds, "transaksi")
-        dgvjual.DataSource = ds.Tables("transaksi")
-        kon.Close()
+        tampildata()
     End Sub
 
     Sub tampildata()
